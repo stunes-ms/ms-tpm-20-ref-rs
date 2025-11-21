@@ -120,6 +120,9 @@ impl MsTpm20RefPlatform {
         // itself to prep the TPM.
         tracing::trace!("Initializing TPM library...");
 
+        let foo = maybe_platform.as_mut().unwrap().state.nvmem.region.len();
+        tracing::info!("FOOBAR TPM library init: size {}", foo);
+
         maybe_platform.as_mut().unwrap().signal_power_on()?;
 
         // Make sure to drop the mutex guard, as the TPM library will call back into the

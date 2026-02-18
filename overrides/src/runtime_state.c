@@ -103,7 +103,7 @@ static const TPM_RUNTIME_STATE_ENTRY s_TpmRuntimeVariables[] =
         {(char *)&s_cpHashForCommandAudit, sizeof(s_cpHashForCommandAudit)},
         {(char *)&s_DAPendingOnNV, sizeof(s_DAPendingOnNV)},
         {(char *)&s_selfHealTimer, sizeof(s_selfHealTimer)},
-        // {(char *)&s_evictNvEnd, sizeof(s_evictNvEnd)},  // pointer
+        {(char *)&s_evictNvEnd, sizeof(s_evictNvEnd)},  // pointer
         {(char *)&s_indexOrderlyRam, sizeof(s_indexOrderlyRam)},
         {(char *)&s_maxCounter, sizeof(s_maxCounter)},
         {(char *)&s_cachedNvIndex, sizeof(s_cachedNvIndex)},

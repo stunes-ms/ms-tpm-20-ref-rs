@@ -367,7 +367,7 @@ mod c_api {
     #[no_mangle]
     #[tracing::instrument(level = "trace", ret)]
     pub unsafe extern "C" fn _plat__GetNvSize() -> u32 {
-        tracing::info!("FOOBAR _plat__GetNvSize {}", platform!().nv_size());
+        tracing::error!("FOOBAR _plat__GetNvSize {}", platform!().nv_size());
         platform!().nv_size() as u32
     }
 }
